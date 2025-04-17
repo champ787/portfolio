@@ -1,0 +1,488 @@
+.main {
+  background-image: url('../Images/background.jpg');
+  background-size: cover;
+  /* Ensure the image covers the entire background */
+  background-position: center;
+  /* Center the image */
+  background-repeat: no-repeat;
+  /* Ensure the image doesn't repeat */
+  height: 100vh;
+  /* Ensure it takes the full height of the viewport */
+  width: 100%;
+  overflow: hidden;
+  /* Prevent scrolling on the main container */
+  position: relative;
+  /* Create a context for absolute positioning */
+  animation: flyIn 1s ease-out forwards;  
+  opacity: 0; /* Start invisible and fade in */  
+  transform: translateY(100%);  
+  display: flex;
+  flex-direction: column;
+}
+
+@keyframes flyIn {  
+  to {  
+      opacity: 1;  
+      transform: translateY(0);  
+  }  
+}  
+
+
+.header {
+  display: flex;
+  flex-direction: row;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding-left: 1.5%;
+  background-color: white;
+  font-size: 30px;
+  height: 50px;
+  opacity: 0.8;
+  font-family: 'Times New Roman', Times, serif;
+  z-index: 1000;
+  /* Ensure the header stays on top */
+}
+
+.body-part {
+  margin-top: 80px;
+  /* Adjust this value according to the height of the header */
+  opacity: 0.95;
+  background-color: white;
+  font-family: 'Times New Roman', Times, serif;
+  padding-left: 4%;
+  padding-top: 1%;
+  padding-bottom: 1%;
+  padding-right: 4%;
+  margin-left: 4%;
+  margin-right: 4%;
+  height: calc(100vh - 80px);
+  /* Adjust height based on header height */
+  overflow-y: scroll;
+  /* Enable vertical scrolling for the body part */
+  position: relative;
+  /* Ensure it scrolls within the main container */
+  z-index: 999;
+  /* Ensure the body part stays below the header */
+  /* Hide scrollbar for WebKit browsers */
+  -ms-overflow-style: none;
+  /* IE and Edge */
+  scrollbar-width: none;
+  /* Firefox */
+}
+
+.body-part::-webkit-scrollbar {
+  display: none;
+  /* Safari and Chrome */
+}
+
+
+.bio {
+  opacity: 1;
+  color: black;
+  font-family: 'Times New Roman', Times, serif;
+  font-size: larger;
+}
+
+
+.timeline-main {
+  display: flex;
+  flex-direction: row;
+  padding-left: 0%;
+  color: black;
+  height: auto;
+  font-family: 'Times New Roman', Times, serif;
+}
+
+.events li {
+  display: flex;
+  color: #000000;
+}
+
+.events time {
+  position: relative;
+  padding: 0 1.5em;
+}
+
+.events time::after {
+  content: "";
+  position: absolute;
+  z-index: 2;
+  right: 0;
+  top: 0;
+  transform: translateX(50%);
+  border-radius: 50%;
+  background-color: rgb(133, 169, 133);
+  border: 1px #000000 solid;
+  width: .8em;
+  height: .8em;
+}
+
+.events li:first-child time::after {  
+  background-color: red;  
+  animation: blink 3s infinite, circular-wave 3s infinite;  
+} 
+
+.events li:last-child time::after {  
+  background-color: rgb(255, 255, 0);  
+  /* animation: blink 3s infinite, circular-wave 3s infinite;   */
+} 
+
+
+ 
+@keyframes blink {  
+   0%, 50%, 100% {  
+       opacity: 1;  
+   }  
+   25%, 75% {  
+       opacity: 0;  
+   }  
+}  
+ 
+@keyframes circular-wave {  
+   0% {  
+       box-shadow: 0 0 0 0 rgba(231, 53, 53, 0.808);  
+   }  
+   70% {  
+       box-shadow: 0 0 0 20px rgba(255, 0, 0, 0);  
+   }  
+   100% {  
+       box-shadow: 0 0 0 0 rgba(255, 0, 0, 0);  
+   }  
+}  
+
+
+.events span {
+  padding: 0 1.5em 1.5em 1.5em;
+  position: relative;
+}
+
+.events span::before {
+  content: "";
+  position: absolute;
+  z-index: 1;
+  left: 0;
+  height: 100%;
+  border-left: 1px #ccc solid;
+}
+
+.events strong {
+  display: block;
+  font-weight: bolder;
+}
+
+.events {
+  margin: 1em;
+  width: 100%;
+}
+
+.events,
+.events *::before,
+.events *::after {
+  box-sizing: border-box;
+  font-family: arial;
+}
+
+.icon {
+  width: auto;
+  margin-left: 34%;
+  align-content: center;
+  zoom: 0.8;
+  color: black;
+}
+
+.social-icons {
+  transition: transform 0.3s ease-in-out;
+  ;
+}
+
+.social-icons :hover {
+  transform: scale(1.2);
+}
+
+.certification-main {
+  display: flex;
+  flex-direction: row;
+  background-color: rgb(255, 255, 255);
+  padding-left: 4%;
+  margin-bottom: 4%;
+}
+
+.certification-right {
+  margin-top: -1%;
+  color: black;
+   padding-left: 8%;
+  font-family: 'Times New Roman', Times, serif;
+
+}
+
+.certification-left {
+
+  margin-top: 5%;
+  width: 40%;
+  /* Adjust the width as needed */
+  height: 40%;
+  /* Set a fixed height */
+  object-fit: fill;
+  opacity: 1;
+  background-color: rgba(255, 255, 255, 1);
+}
+
+.highlight {
+
+  color: red;
+
+  /* Adjust the color as needed */
+}
+
+.education-main {
+  margin-top: 5%;
+}
+
+.skills-inner {
+
+ font-family: Arial, Helvetica, sans-serif;
+  padding-left: 5%;
+  display: flex;
+  flex-direction: row;
+}
+
+.icons {
+  height: 50px;
+  width: 50px;
+  margin: 15px;
+  cursor: grab;
+}
+
+.skills-main {
+  margin-top: 2%;
+  padding-left: 4%;
+}
+
+.skills-container {
+  width: 100%;
+  height: 400px;
+  margin: 20px auto;
+  position: relative;
+  overflow: hidden;
+}
+
+.icon-wrapper {}
+
+.bio {
+  font-size: 16px;
+  /* Adjust the font size for the regular text */
+  line-height: 1.5;
+  /* Adjust the line height for the regular text */
+  position: relative;
+}
+
+.first-letter {
+  font-size: 60px;
+  /* Adjust the font size for the first letter */
+  line-height: 0.8;
+  /* Adjust the line height for the first letter */
+  float: left;
+  margin-right: 5px;
+}
+
+.front-main{
+  background-color: #497B88;
+  height: 100vh;
+  width: 100vw;
+  background-image: url('../Images/background.jpg');
+  background-size: cover;
+  /* Ensure the image covers the entire background */
+  background-position: center;
+  /* Center the image */
+  background-repeat: no-repeat;
+
+}
+
+.front-header{
+  color: black;
+  display: flex;
+  flex-direction: row;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding-left: 1.5%;
+  background-color: white;
+  font-size: 30px;
+  height: 60%;
+  opacity: 0.6;
+  font-family: 'Times New Roman', Times, serif;
+  z-index: 1000;
+}
+
+/* Application.css */    
+  
+.front-main, .main {  
+  position: relative;  
+  height: 100vh;  
+  transition: transform 1s ease-out, opacity 1s ease-out; /* Add transition for animation */  
+}  
+
+.front-main.fly-out {  
+  transform: translateY(-100vh); /* Move the page up */  
+  opacity: 0; /* Fade out */  
+}  
+
+.main.fly-in {  
+  transform: translateY(100vh); /* Start from below */  
+  opacity: 1; /* Fade in */  
+  animation: flyIn 1s forwards ease-out;  
+}  
+
+@keyframes flyIn {  
+  from {  
+      transform: translateY(100vh);  
+      opacity: 0;  
+  }  
+  to {  
+      transform: translateY(0);  
+      opacity: 1;  
+  }  
+}  
+
+.triangle-button-wrapper {  
+  width: 100%;  
+  display: flex;  
+  justify-content: center;  
+  position: absolute;  
+  bottom: 20px; /* Adjust this value to position the button */  
+}  
+
+.triangle
+.triangle-button-wrapper {  
+  width: 100%;  
+  display: flex;  
+  justify-content: center;  
+  position: absolute;  
+  bottom: 20px; /* Adjust this value to position the button */  
+}  
+
+.triangle-button {  
+  cursor: pointer;  
+  display: flex;  
+  align-items: center;  
+  justify-content: center;  
+  position: relative;  
+}  
+
+.triangle {  
+  width: 0;  
+  height: 0;  
+  border-left: 20px solid transparent;  
+  border-right: 20px solid transparent;  
+  border-top: 40px solid #B6CACF;  
+  animation: wave 1.5s infinite;  
+
+}  
+
+@keyframes wave {  
+  0% { transform: translateY(0); }  
+  50% { transform: translateY(-10px); }  
+  100% { transform: translateY(0); }  
+}  
+
+.arrow-trail {  
+  position: absolute;  
+  top: 40px;  
+  display: flex;  
+  flex-direction: column;  
+  align-items: center;  
+  animation: moveDown 1.5s infinite;  
+}  
+
+.arrow {  
+  width: 0;  
+  height: 0;  
+  border-left: 10px solid transparent;  
+  border-right: 10px solid transparent;  
+  border-top: 20px solid black;  
+  margin-top: 10px;  
+}  
+
+@keyframes moveDown {  
+  0% { transform: translateY(0); }  
+  100% { transform: translateY(20px); }  
+}  
+
+.front-icon{
+color: #000000;
+}
+.mobile-warning {  
+  display: flex;
+  flex-direction: column;  
+  justify-content: center;  
+  align-items: center;  
+  height: 100vh;  
+  text-align: center;  
+  background-color: #f8f9fa;  
+  color: #333;  
+  font-family: Arial, sans-serif;  
+  font-size: 1.5rem;  
+  padding: 20px;  
+}  
+
+.mobile-warning p {  
+  background-color: #fff;  
+  padding: 20px;  
+  border-radius: 8px;  
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);  
+}  
+
+.skill-item {  
+  display: flex;  
+  flex-direction: column;  
+  align-items: center;  
+  margin: 10px;  
+}  
+
+.skill-item p {  
+  margin-top: 5px;  
+  font-size: 14px;  
+  text-align: center;  
+}  
+
+.research-main{
+  display: flex;
+  flex-direction: row;
+  padding-bottom: 10%;
+}
+
+.projects-main{
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  text-align: center;
+}
+
+.contact-main{
+  background-color: rgb(176, 174, 174);
+  height: 50px;
+  width: 100%;
+  text-align: center;
+  margin-top: 5%;
+  align-content: center;
+}
+@keyframes teeter {  
+  0% { transform: rotate(0); }  
+  25% { transform: rotate(calc(var(--teeter-degree) * -1)); }  
+  50% { transform: rotate(var(--teeter-degree)); }  
+  75% { transform: rotate(calc(var(--teeter-degree) * -1)); }  
+  100% { transform: rotate(0); }  
+}  
+
+.icons {  
+  animation: teeter 1s infinite;  
+  display: inline-block;  
+  transition: transform 0.3s ease;  
+}  
+.project-bullets{
+  text-align: left;
+}
+

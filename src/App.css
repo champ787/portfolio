@@ -1,0 +1,135 @@
+/* body {
+  background-color: #90AFC5;
+  background: linear-gradient(to right, #ffffff,#90AFC5 );
+}
+.App {
+  text-align: center;
+
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  height: 100vh;
+  width: 20vh;
+  background-color:#2A3132;
+  float: right;
+  
+}
+
+.App-header:hover {
+
+}
+
+.left-navigation {
+  float: left;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.header-field {
+  color: white;
+  padding-left: 1vw;
+ top: 2vh;
+  font-weight: 600;
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 20px;
+  margin-bottom: 50px; 
+  position: relative;
+  transition: all 0.3s ease-in-out;
+  text-decoration: none;
+}
+
+.header-field:hover {
+  transform: translateX(-10px); 
+  cursor: pointer;
+}
+
+.header-field:active {
+  transform: translateX(-10px);
+}
+
+.header-field::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -5px;
+  width: 0;
+  height: 100%;
+  border-left: 2px solid #90AFC5;
+  transition: width 0.5s ease-in-out;
+}
+
+.header-field:hover::before {
+  width: 15px; 
+}
+
+.right-navigation {
+  color: #90AFC5;
+  font-size: 200px;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.image-circle {
+  width: 10vh;
+  height: 10vw;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.image-circle img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.moving-image {
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  object-fit: cover;
+  animation: moveAround 3s ease-in-out forwards, jumpToExperience 3s ease-in-out forwards 3s, disappear 1s ease-in-out forwards 6s;
+  opacity: 1;
+}
+
+@keyframes moveAround {
+  0% { top: 10%; left: 10%; }
+  25% { top: 30%; left: 50%; }
+  50% { top: 50%; left: 70%; }
+  75% { top: 70%; left: 30%; }
+  100% { top: calc(50% - 25px); left: calc(50% - 10vh / 2); } 
+}
+
+@keyframes jumpToExperience {
+  0% { top: calc(50% - 25px); left: calc(50% - 10vh / 2); }
+  50% { top: calc(45% - 25px); left: calc(45% - 10vh / 2); }
+  100% { top: calc(50% - 25px); left: calc(50% - 10vh / 2); }
+}
+
+@keyframes disappear {
+  0% { opacity: 1; }
+  100% { opacity: 0; }
+} */
