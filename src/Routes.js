@@ -1,4 +1,4 @@
-import { HashRouter as Router, Routes, Route } from 'react-router-dom';
+import { HashRouter as Router, Routes, Route, HashRouter } from 'react-router-dom';
 import { HomeLanding } from './Pages/HomeLanding';
 import Research from './Pages/Research';
 import Frontpage from './Pages/Frontpage';
@@ -33,13 +33,13 @@ export const RoutesFunc = () => {
         return <MobileWarning />;  
     }  
     return (
-        <Router>
+        <HashRouter>
             {/* <Header /> */}
             <Routes>
             <Route path="/" element={<Frontpage />} />
                 <Route path="/home" element={<HomeLanding />} />
                 <Route path="/r&d" element={<Research />} />
             </Routes>
-        </Router>
+        </HashRouter>
     );
 }
