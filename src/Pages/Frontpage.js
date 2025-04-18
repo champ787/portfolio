@@ -50,8 +50,8 @@ export const Frontpage = () => {
                         <h1 style={{ marginTop: '30px', fontSize: '80px', display: 'flex', flexDirection: 'row' }}>iwari</h1>  
                     </span>  
                 </div>  
-                <div style={{ alignContent: 'end', marginLeft: '500px', fontFamily: 'sans-serif', fontStyle: 'italic', fontSize: '25px', whiteSpace: 'nowrap' }}>  
-                    -: दुर्लभं हि सदा सुखं // :-  
+                <div style={{ alignContent: 'end', marginLeft: '350px', fontFamily: 'sans-serif', fontStyle: 'italic', fontSize: '25px', whiteSpace: 'nowrap', fontWeight:'100px', zIndex:'999' }}>  
+                 Certified ServiceNow Developer 
                 </div>  
             </div>  
 
