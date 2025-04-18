@@ -58,7 +58,7 @@ export const HomeLanding = () => {
                         </a>
                     </li>
                     <li>
-                        <a href="https://drive.google.com/file/d/1Mcscp2BnXz9I9cUwFs01GCDnq3CUQ_KF/view?usp=drive_link" target="_blank" rel="noopener noreferrer" style={{ color: 'White', marginLeft: '40px' }} className='social-icons'>
+                        <a href="https://drive.google.com/file/d/1aaWb7VaGSzGm_azqdJwTDQPExrR4I5QO/view?usp=sharing" target="_blank" rel="noopener noreferrer" style={{ color: 'White', marginLeft: '40px' }} className='social-icons'>
                             <a>Resume</a>
                             <FontAwesomeIcon icon={faDownload} size="xl" />
                         </a>
@@ -71,7 +71,7 @@ export const HomeLanding = () => {
                         </a>
                     </li> */}
                     <li>
-                        <a href="https://github.com/your-github-profile" target="_blank" rel="noopener noreferrer" style={{ color: 'White', marginLeft: '40px' }} className='social-icons'>
+                        <a href="https://github.com/pranjal-iiitg" target="_blank" rel="noopener noreferrer" style={{ color: 'White', marginLeft: '40px' }} className='social-icons'>
                             <a>GitHub</a>
                             <FontAwesomeIcon icon={faGithub} size="xl" />
                         </a>
