@@ -17,29 +17,8 @@ return (
     <div className="home-page">
       <div style={{textAlign:'left'}}>
         <h1 className='name-title'>Pranjal Tiwari</h1>
-        {/* <h10 className='works-at-title'>Works at PwC AC(Bangalore).INDIA</h10> */}
+      
       </div>
-
-      {/* <div className='icons'>
-        <a href="https://www.instagram.com/indian__brain" target="_blank" rel="noopener noreferrer" title='Instagram'>
-          <FontAwesomeIcon icon={faInstagram} size="sm" className="icon" style={{ color: '#BFA181' }} />
-        </a>
-        <a href="https://github.com/your-github-profile" target="_blank" rel="noopener noreferrer" title='GitHub'>
-          <FontAwesomeIcon icon={faGithub} size="sm" className="icon" style={{ color: '#BFA181' }} />
-        </a>
-        <a href="https://www.linkedin.com/in/pranjal-tiwari332" target="_blank" rel="noopener noreferrer" title='LinkedIn'>
-          <FontAwesomeIcon icon={faLinkedin} size="sm" className="icon" style={{ color: '#BFA181' }} />
-        </a>
-        <a href="mailto:pranjal.tiwari332@gmail.com" title='E-mail'>
-          <FontAwesomeIcon icon={faEnvelopeSolid} size="sm" className="icon" style={{ color: '#BFA181' }} />
-        </a>
-        <a href="https://wa.me/9621792087" target="_blank" rel="noopener noreferrer" title='WhatsApp'>
-          <FontAwesomeIcon icon={faWhatsapp} size="sm" className="icon" style={{ color: '#BFA181' }} />
-        </a>
-        <a href="https://drive.google.com/file/d/1Mcscp2BnXz9I9cUwFs01GCDnq3CUQ_KF/view?usp=drive_link" target="_blank" rel="noopener noreferrer" title='Download Resume'>
-          <FontAwesomeIcon icon={faDownload} size="sm" className="icon" style={{ color: '#BFA181' }} />
-        </a>
-      </div> */}
 
     </div>
 
