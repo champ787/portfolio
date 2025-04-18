@@ -3,6 +3,7 @@ import { HomeLanding } from './Pages/HomeLanding';
 import Research from './Pages/Research';
 import Frontpage from './Pages/Frontpage';
 import React, { useState, useEffect } from 'react';  
+import IntegrationsPage from './Pages/IntegrationPages/IntegrationsPage';
  
 const MobileWarning = () => {  
     return (  
@@ -39,6 +40,7 @@ export const RoutesFunc = () => {
             <Route path="/" element={<Frontpage />} />
                 <Route path="/home" element={<HomeLanding />} />
                 <Route path="/r&d" element={<Research />} />
+                <Route path="/integrations" element={<IntegrationsPage />} />
             </Routes>
         </HashRouter>
     );
