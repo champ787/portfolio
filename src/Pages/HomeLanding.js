@@ -71,7 +71,7 @@ export const HomeLanding = () => {
                         </a>
                     </li> */}
                     <li>
-                        <a href="https://github.com/your-github-profile" target="_blank" rel="noopener noreferrer" style={{ color: 'White', marginLeft: '40px' }} className='social-icons'>
+                        <a href="https://github.com/pranjal-iiitg" target="_blank" rel="noopener noreferrer" style={{ color: 'White', marginLeft: '40px' }} className='social-icons'>
                             <a>GitHub</a>
                             <FontAwesomeIcon icon={faGithub} size="xl" />
                         </a>
