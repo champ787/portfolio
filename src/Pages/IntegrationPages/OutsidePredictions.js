@@ -24,7 +24,6 @@ const OutsidePredictions = () => {
   const handleSubmit = async (values) => {
     if (!values.description.trim()) {
       alert('Description cannot be empty. Please provide a description.');
-      window.location.reload();
       return;
     }
 
@@ -49,10 +48,15 @@ const OutsidePredictions = () => {
       const best = (scores) =>
         Object.keys(scores).reduce((a, b) => (scores[a] > scores[b] ? a : b));
 
-      setMostRelevantContactType(best(contactTypeScores));
-      setMostRelevantAssignedTo(best(assignedToScores));
-      setMostRelevantUrgency(best(urgencyScores));
-      setMostRelevantImpact(best(impactScores));
+      const bestContactType = best(contactTypeScores);
+      const bestAssignedTo = best(assignedToScores);
+      const bestUrgency = best(urgencyScores);
+      const bestImpact = best(impactScores);
+
+      setMostRelevantContactType(bestContactType);
+      setMostRelevantAssignedTo(bestAssignedTo);
+      setMostRelevantUrgency(bestUrgency);
+      setMostRelevantImpact(bestImpact);
 
       setChartData({
         contactType: {
@@ -99,10 +103,13 @@ const OutsidePredictions = () => {
 
       await createServiceNowIncident(
         values.description,
-        best(contactTypeScores),
-        best(assignedToScores),
-        best(urgencyScores),
-        best(impactScores)
+        bestContactType,
+        bestAssignedTo,
+        bestUrgency,
+        bestImpact,
+        values.pdiUrl,
+        values.username,
+        values.password
       );
     } catch (error) {
       console.error('Error fetching prediction:', error);
@@ -114,7 +121,10 @@ const OutsidePredictions = () => {
     contactType,
     assignedTo,
     urgency,
-    impact
+    impact,
+    pdiUrl,
+    username,
+    password
   ) => {
     try {
       const response = await axios.post('http://localhost:3001/api/incident', {
@@ -124,6 +134,9 @@ const OutsidePredictions = () => {
         urgency,
         impact,
         caller_id: 'Cathryn Nicolaus',
+        pdi_url: pdiUrl,
+        username,
+        password,
       });
       alert('Incident created successfully');
       console.log('Incident created:', response.data);
@@ -139,36 +152,58 @@ const OutsidePredictions = () => {
         🌐 Outside Intelligence in ServiceNow
       </h1>
 
-      <Formik initialValues={{ description: '' }} onSubmit={handleSubmit}>
+      <Formik
+        initialValues={{
+          description: '',
+          pdiUrl: '',
+          username: '',
+          password: '',
+        }}
+        onSubmit={handleSubmit}
+      >
         {() => (
           <Form>
             <div style={{ textAlign: 'center', marginBottom: '40px' }}>
-              <label
-                htmlFor="description"
-                style={{ display: 'block', fontSize: '18px', marginBottom: '10px' }}
-              >
+              <label htmlFor="description" style={{ display: 'block', marginBottom: '10px' }}>
                 Describe the Issue:
               </label>
               <Field
                 as="textarea"
-                id="description"
                 name="description"
                 placeholder="Enter the issue description..."
                 style={{
                   width: '80%',
-                  minHeight: '120px',
+                  minHeight: '100px',
                   padding: '12px',
-                  borderRadius: '8px',
-                  border: '1px solid #ccc',
                   fontSize: '16px',
-                  resize: 'vertical',
+                  borderRadius: '8px',
+                  marginBottom: '15px',
                 }}
               />
+
+              <Field
+                name="pdiUrl"
+                placeholder="ServiceNow PDI URL eg. https://dev008493.service-now.com/"
+                style={{ width: '80%', padding: '10px', marginBottom: '10px' }}
+              />
               <br />
+              <Field
+                name="username"
+                placeholder="Username"
+                style={{ width: '80%', padding: '10px', marginBottom: '10px' }}
+              />
+              <br />
+              <Field
+                name="password"
+                type="password"
+                placeholder="Password"
+                style={{ width: '80%', padding: '10px', marginBottom: '20px' }}
+              />
+              <br />
+
               <button
                 type="submit"
                 style={{
-                  marginTop: '15px',
                   padding: '10px 20px',
                   fontSize: '16px',
                   borderRadius: '6px',
