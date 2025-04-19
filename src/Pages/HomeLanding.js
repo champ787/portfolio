@@ -38,64 +38,50 @@ export const HomeLanding = () => {
                 </div>
             </div>
             <div className="floating-ribbon-menu">
-                <ul>
-                    <li>
-                        <a href="https://www.linkedin.com/in/pranjal-tiwari332" target="_blank" rel="noopener noreferrer" style={{ color: 'White', marginLeft: '40px' }} className='social-icons'>
-                            <a>LinkedIn</a>
-                            <FontAwesomeIcon icon={faLinkedin} size="xl" />
-                        </a>
-                    </li>
-                    <li>
-                        <a href="mailto:pranjal.tiwari332@gmail.com" style={{ color: 'White', marginLeft: '40px' }} className='social-icons'>
-                            <a>Mail</a>
-                            <FontAwesomeIcon icon={faEnvelopeSolid} size="xl" />
-                        </a>
-                    </li>
-                    <li>
-                        <a href="https://wa.me/9621792087" target="_blank" rel="noopener noreferrer" style={{ color: 'White', marginLeft: '40px' }} className='social-icons'>
-                            <a>WhatsApp</a>
-                            <FontAwesomeIcon icon={faWhatsapp} size="xl" />
-                        </a>
-                    </li>
-                    <li>
-                        <a href="https://drive.google.com/file/d/1aaWb7VaGSzGm_azqdJwTDQPExrR4I5QO/view?usp=sharing" target="_blank" rel="noopener noreferrer" style={{ color: 'White', marginLeft: '40px' }} className='social-icons'>
-                            <a>Resume</a>
-                            <FontAwesomeIcon icon={faDownload} size="xl" />
-                        </a>
-                    </li>
+  <ul>
+    <li>
+      <span className="label">LinkedIn</span>
+      <a href="https://www.linkedin.com/in/pranjal-tiwari332" target="_blank" rel="noopener noreferrer">
+        <FontAwesomeIcon icon={faLinkedin} size="xl" />
+      </a>
+    </li>
+    <li>
+      <span className="label">Mail</span>
+      <a href="mailto:pranjal.tiwari332@gmail.com">
+        <FontAwesomeIcon icon={faEnvelopeSolid} size="xl" />
+      </a>
+    </li>
+    <li>
+      <span className="label">WhatsApp</span>
+      <a href="https://wa.me/9621792087" target="_blank" rel="noopener noreferrer">
+        <FontAwesomeIcon icon={faWhatsapp} size="xl" />
+      </a>
+    </li>
+    <li>
+      <span className="label">Resume</span>
+      <a href="https://drive.google.com/file/d/1aaWb7VaGSzGm_azqdJwTDQPExrR4I5QO/view?usp=sharing" target="_blank" rel="noopener noreferrer">
+        <FontAwesomeIcon icon={faDownload} size="xl" />
+      </a>
+    </li>
+    <li>
+      <span className="label">GitHub</span>
+      <a href="https://github.com/pranjal-iiitg" target="_blank" rel="noopener noreferrer">
+        <FontAwesomeIcon icon={faGithub} size="xl" />
+      </a>
+    </li>
+    <li onClick={() => navigate('/integrations')}>
+      <span className="label">Integrations</span>
+      <a style={{ cursor: 'pointer' }}>
+        <img
+          src={snow}
+          alt="snow icon"
+          style={{ height: '30px', borderRadius: '30px' }}
+        />
+      </a>
+    </li>
+  </ul>
+</div>
 
-                    {/* <li>
-                        <a href="https://www.instagram.com/indian__brain" target="_blank" rel="noopener noreferrer" style={{ color: 'White', marginLeft: '40px' }} className='social-icons'>
-                            <a>Instagram</a>
-                            <FontAwesomeIcon icon={faInstagram} size="xl" />
-                        </a>
-                    </li> */}
-                    <li>
-                        <a href="https://github.com/pranjal-iiitg" target="_blank" rel="noopener noreferrer" style={{ color: 'White', marginLeft: '40px' }} className='social-icons'>
-                            <a>GitHub</a>
-                            <FontAwesomeIcon icon={faGithub} size="xl" />
-                        </a>
-                    </li>
-                    <li onClick={() => navigate('/integrations')}>
-                        <a
-                          
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            style={{ color: 'white', marginLeft: '0px', alignItems: 'center' }}
-                            className='social-icons'
-                        >
-                            <span style={{ marginRight: '10px' }}>Integrations</span>
-                            <img
-                                src={snow}
-                                alt="snow icon"
-                                style={{ height: '30px', borderRadius: '30px', marginLeft: '10px' }}
-                            />
-                        </a>
-                    </li>
-
-
-                </ul>
-            </div>
             <div className='body-part'>
                 <p className='bio'>
                     <h1 style={{ fontSize: '30px' }}></h1>

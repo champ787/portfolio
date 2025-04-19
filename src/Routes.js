@@ -3,7 +3,7 @@ import { HomeLanding } from './Pages/HomeLanding';
 import Research from './Pages/Research';
 import Frontpage from './Pages/Frontpage';
 import React, { useState, useEffect } from 'react';  
-import IntegrationsPage from './Pages/IntegrationPages/IntegrationsPage';
+import IntegrationsPage from './Pages/IntegrationPages/OutsidePredictions';
  
 const MobileWarning = () => {  
     return (  

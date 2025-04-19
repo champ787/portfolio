@@ -11,10 +11,10 @@ app.use(express.json());
 app.post('/api/incident', async (req, res) => {  
   try {  
     // Forward the request to the ServiceNow API  
-    const response = await axios.patch('https://dev247641.service-now.com/api/1116658/create_new_record_pi/create_incident', req.body, {  
+    const response = await axios.patch('https://dev204508.service-now.com/api/1116658/create_new_record_pi/create_incident', req.body, {  
       auth: {  
         username: 'admin',  
-        password: 'Pranjal@1998',  
+        password: 'E=UFc9J8-uik',  
       },  
       headers: {  
         'Content-Type': 'application/json',  
