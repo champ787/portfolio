@@ -59,7 +59,7 @@ export const HomeLanding = () => {
     </li>
     <li>
       <span className="label">Resume</span>
-      <a href="https://drive.google.com/file/d/1aaWb7VaGSzGm_azqdJwTDQPExrR4I5QO/view?usp=sharing" target="_blank" rel="noopener noreferrer">
+      <a href="https://drive.google.com/file/d/1_VgFHNSly3DhTQ4HA9qt5wZCmJwP-DDG/view?usp=sharing" target="_blank" rel="noopener noreferrer">
         <FontAwesomeIcon icon={faDownload} size="xl" />
       </a>
     </li>
