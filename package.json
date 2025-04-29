@@ -1,7 +1,7 @@
 {
   "name": "portfolio",
   "version": "0.1.0",
-  "homepage": "https://pranjal-iiitg.github.io/portfolio",
+  "homepage": "https://pranjal-iiitg.github.io/portfolio-prod",
   "private": true,
   "dependencies": {
     "@fdorantesm/react-skill-icons": "^1.0.5",
